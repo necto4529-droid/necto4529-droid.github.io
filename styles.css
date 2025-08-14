@@ -1,0 +1,83 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(270deg, #ffcc00, #ff6600, #cc00ff, #ff0033);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+header {
+    padding: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #ffcc00;
+    color: black;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {box-shadow: 0 0 10px #fff;}
+    50% {box-shadow: 0 0 25px #ffcc00;}
+    100% {box-shadow: 0 0 10px #fff;}
+}
+
+.screenshots {
+    margin-top: 30px;
+}
+
+.screenshots img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    color: white;
+}
+
+#closeBtn {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
