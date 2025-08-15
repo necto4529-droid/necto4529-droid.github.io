@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+}
+
+.btn.primary {
+    background-color: #FFA500;
+    color: white;
+}
+
+.btn.secondary {
+    background-color: #333;
+    color: white;
+}
+
+.btn.play {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+}
