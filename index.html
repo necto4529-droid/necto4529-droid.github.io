@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2048 Pro — скачать APK, скриншоты, PWA</title>
+  <meta name="description" content="2048 Pro — классическая головоломка в современном дизайне. Скачать APK, офлайн-режим, PWA." />
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.png" sizes="256x256">
+  <meta name="theme-color" content="#f2b179">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" as="image" href="banner.jpg">
+  <link rel="stylesheet" href="styles.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.btn {
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.4);
+}
+.play-online {
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    color: white;
+}
+</style>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="icon.png" alt="2048 Pro" class="logo">
+      <div class="title">2048&nbsp;Pro
+<a href="https://necto4529-droid.github.io/2048-Pro/" class="btn play-online">🎮 Играть онлайн</a>
+
+</div>
+    </div>
+
+    <div class="controls">
+      <button id="themeToggle" class="chip" aria-label="Toggle theme">🌙</button>
+      <div class="lang-switch">
+        <button class="chip" data-lang="ru">RU</button>
+        <button class="chip" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="banner.jpg" alt="2048 Pro banner" class="hero-banner">
+      <div class="hero-cta">
+        <h1 data-t="title">Классическая 2048 в современном стиле</h1>
+        <p data-t="subtitle">Свайпай плитки, соединяй числа и достигай легендарной 2048. Без рекламы. Бесплатно. Оффлайн.</p>
+        <div class="cta-row">
+          <a id="btnApk" class="btn primary" href="apk/2048-pro.signed.apk" download data-track="apk" data-t="btn_download">
+            Скачать APK
+          </a>
+          <button class="btn ghost soon" data-open-modal data-t="btn_gp"></button>
+          <button class="btn ghost soon" data-open-modal data-t="btn_apkp">APKPure</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 data-t="features_title">Особенности</h2>
+      <ul class="grid">
+        <li>🎨 <span data-t="f_design">Современный дизайн: светлая/тёмная тема</span></li>
+        <li>⚡ <span data-t="f_perf">Плавные анимации и отзывчивое управление</span></li>
+        <li>📴 <span data-t="f_offline">Работает офлайн (PWA + Service Worker)</span></li>
+        <li>🆓 <span data-t="f_free">Без рекламы и абсолютно бесплатно</span></li>
+      </ul>
+    </section>
+
+    <section class="screens">
+      <h2 data-t="shots_title">Скриншоты</h2>
+      <div class="rail">
+        <img src="shot-1.jpg" alt="s1">
+        <img src="shot-2.jpg" alt="s2">
+        <img src="shot-3.jpg" alt="s3">
+        <img src="shot-4.jpg" alt="s4">
+        <img src="shot-5.jpg" alt="s5">
+        <img src="shot-6.jpg" alt="s6">
+      </div>
+    </section>
+
+    <section class="how">
+      <h2 data-t="how_title">Как играть</h2>
+      <ol>
+        <li data-t="how_1">Свайпай вверх/вниз/влево/вправо.</li>
+        <li data-t="how_2">Соединяй одинаковые числа, чтобы получить новые.</li>
+        <li data-t="how_3">Достигни плитки 2048 — и ставь рекорды!</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="left">
+      <span>© 2048 Pro</span>
+    </div>
+    <div class="right">
+      <a href="#" class="muted" data-open-modal data-t="links_terms">Условия</a>
+      <a href="#" class="muted" data-open-modal data-t="links_privacy">Конфиденциальность</a>
+      <span class="dot">•</span>
+      <span class="muted" id="clicksStat" title="Счётчик загрузок">0</span>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <dialog id="soonModal" class="modal">
+    <div class="modal-card">
+      <div class="modal-title" data-t="modal_title">Скоро будет доступно!</div>
+      <div class="modal-note" data-t="modal_note">Мы уже работаем над публикацией 🧡</div>
+      <button class="btn primary" data-close-modal data-t="close">Понятно</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
