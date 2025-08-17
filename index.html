@@ -71,17 +71,39 @@
 </ol>
 </section>
 </main>
+
 <footer class="site-footer">
-<div class="left">
-<span>© 2048 Pro</span>
-</div>
-<div class="right">
-<a class="muted" data-open-modal="" data-t="links_terms" href="#">Условия</a>
-<a class="muted" data-open-modal="" data-t="links_privacy" href="#">Конфиденциальность</a>
-<span class="dot">•</span>
-<span class="muted" id="clicksStat" title="Счётчик загрузок">0</span>
-</div>
+  <div class="left">
+    <span>© 2048 Pro</span>
+  </div>
+  <div class="right">
+    <a class="btn privacy-btn" href="https://necto4529-droid.github.io/Privacy-2048-Pro/" target="_blank">
+      🔒 Политика конфиденциальности
+    </a>
+    <span class="dot">•</span>
+    <span class="muted" id="clicksStat" title="Счётчик загрузок">0</span>
+  </div>
 </footer>
+
+<style>
+  .privacy-btn {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(255, 152, 0, 0.6);
+  }
+
+  .privacy-btn:hover {
+    background: linear-gradient(135deg, #ffa726, #ff7043);
+    box-shadow: 0 0 14px rgba(255, 87, 34, 0.8);
+    transform: scale(1.05);
+  }
+</style>
+
 <!-- Modal -->
 <dialog class="modal" id="soonModal">
 <div class="modal-card">
